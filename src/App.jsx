@@ -1,7 +1,7 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 import Footer from './components/Footer';
-import Home from './components/Home';
+import RegistrationForm from './components/Form';
 import NavBar from './components/NavBar';
 
 function App() {
@@ -9,7 +9,8 @@ function App() {
     // Requisito 1: App.jsx se mostrarán los componentes Navbar, Home y Footer
     <>
         <NavBar></NavBar>
-        <Home></Home>
+        {/* <Home></Home> */}
+        <RegistrationForm />
         <Footer></Footer>
     </>
   )

@@ -116,3 +116,45 @@ ul {
 .btnAddPizza:hover::before {
   left: 0;
 }
+
+/* Css para el formulario */
+
+.login {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #282c34;
+}
+
+.loginBox {
+  background-color: #1e1e1e;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.formContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.formTitle {
+  color: white;
+  margin-bottom: 1.5rem;
+  text-shadow: 0 0 5px #03bcf4;
+}
+
+.inputContainer {
+  width: 100%;
+}
+
+.formCheckbox {
+  color: white;
+}
+
+.formCheckbox label {
+  margin-left: 0.5rem;
+}
+

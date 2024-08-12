@@ -1,5 +1,5 @@
-// import React from 'react'
-// recordar condición ? true : false
+
+// Requisito 3: Crear el componente Navbar.jsx, este componente debe contener un menú de navegación
 import { Button } from 'react-bootstrap';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
