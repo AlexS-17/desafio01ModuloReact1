@@ -95,7 +95,7 @@ const RegistrationForm = () => {
               <Form.Label>Correo Electrónico</Form.Label>
               <Form.Control
                 type="email"
-                placeholder="Ingresa tu correo"
+                placeholder="Ingresa tu correo electrónico"	
                 value={mail}
                 onChange={(e) => setMail(e.target.value)}
                 className="w-100"
@@ -106,7 +106,7 @@ const RegistrationForm = () => {
               <Form.Label>Contraseña</Form.Label>
               <Form.Control
                 type="password"
-                placeholder="Ingresa una contraseña"
+                placeholder="Ingresa tu contraseña"
                 maxLength={10}
                 value={contrasena}
                 onChange={(e) => setContrasena(e.target.value)}
@@ -147,7 +147,7 @@ const RegistrationForm = () => {
               background: "#212529",
             })}
 
-          <Button variant="primary" type="submit" className="w-50" className="mb-4">
+          <Button variant="primary" type="submit" className="w-50 mb-4">
             Enviar
           </Button>
         </Form>

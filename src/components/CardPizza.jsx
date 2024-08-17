@@ -1,27 +1,38 @@
-import { Button, Card, ListGroup } from 'react-bootstrap';
-import FormatoMiles from './FormatoMiles';
+import { faPizzaSlice } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
-const CardPizza = (props) => {
+import React from "react";
+import Button from "react-bootstrap/Button";
+import Card from "react-bootstrap/Card";
+
+const CardPizza = ({ name, price, ingredients, img }) => {
+  const precio = price.toLocaleString();
+
   return (
-    <Card className='cls-tamannio-cards'>
-      <Card.Img variant="top" src={props.imagen} alt={props.nombre}/>
-      <Card.Body className="p-0">
-            <ListGroup className="list-group-flush">
-                <ListGroup.Item>
-                    <Card.Title className='text-start'>Pizza {props.nombre}</Card.Title>
-                </ListGroup.Item>
-                <ListGroup.Item className='text-center'>
-                    <p>Ingredientes:</p>
-                    <p className='cls-tamannio-ingredientes'>🍕 {props.ingredientes.join(', ')}</p>
-                </ListGroup.Item>
-                <ListGroup.Item className='text-center'>
-                    <strong>Precio: $<FormatoMiles numero = {props.precio} /></strong>
-                    <div className="d-flex justify-content-between pt-3 pb-3">
-                        <Button variant="outline-dark" size="sm">Ver Más 👀</Button>
-                        <Button variant="dark" size="sm">Añadir 🛒</Button>
-                    </div>
-                </ListGroup.Item>
-            </ListGroup>
+    <Card className="m-4" style={{ minHeight: "550px" }}>
+      <Card.Img variant="top" src={img} />
+      <Card.Body>
+        <Card.Title className="text-body-secondary text-center nombrePizza">
+          <h4>{name}</h4>
+        </Card.Title>
+        <hr />
+        <Card.Text className="text-center text-body-secondary">
+          <strong>
+            <FontAwesomeIcon icon={faPizzaSlice} style={{ color: "#74C0FC" }} />
+            {"  "}
+            Ingredientes:
+          </strong>
+          {ingredients}
+        </Card.Text>
+        <hr />
+        <Card.Text className="text-center text-body-secondary">
+          <strong>Precio: </strong> ${precio}
+        </Card.Text>
+
+        <div className="d-flex justify-content-around">
+          <Button variant="outline-secondary">Ver más</Button>
+          <Button variant="outline-secondary">Añadir</Button>
+        </div>
       </Card.Body>
     </Card>
   );
