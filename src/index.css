@@ -158,3 +158,109 @@ ul {
   margin-left: 0.5rem;
 }
 
+
+
+/* Estilos generales */
+.cart {
+  padding-bottom: 2rem;
+}
+
+.cartBox {
+  background-color: #222;
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 15px rgba(3, 188, 244, 0.5);
+}
+
+/* Estilo para las tarjetas de pizzas */
+.cartBox .row {
+  background-color: #333;
+  border-radius: 10px;
+  padding: 1.5rem;
+  box-shadow: 0 0 10px rgba(3, 188, 244, 0.3);
+}
+
+.cartBox img.pizza-image {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 1rem;
+}
+
+/* Botones */
+.cartBox button.btn {
+  background-color: #03bcf4;
+  border: none;
+  color: #fff;
+  padding: 0.5rem 1rem;
+  font-weight: bold;
+  box-shadow: 0 0 10px rgba(3, 188, 244, 0.4);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.cartBox button.btn:hover {
+  background-color: #029ac3;
+  transform: scale(1.05);
+}
+
+/* Estilos del Offcanvas */
+.offcanvas.bg-dark {
+  background-color: #111 !important;
+}
+
+.offcanvas-header,
+.offcanvas-title {
+  color: #fff;
+  text-shadow: 0 0 10px #03bcf4;
+}
+
+/* Estilo para los elementos del carrito */
+.offcanvas-body .row {
+  background-color: #444;
+  border-radius: 10px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 0 10px rgba(3, 188, 244, 0.2);
+}
+
+.offcanvas-body img.pizza-image {
+  width: 100px;
+  height: auto;
+  border-radius: 10px;
+  margin-right: 1rem;
+}
+
+.offcanvas-body .btnCarrito {
+  background-color: #03bcf4;
+  border: none;
+  color: #fff;
+  padding: 0.3rem 0.6rem;
+  margin: 0.2rem;
+  box-shadow: 0 0 5px rgba(3, 188, 244, 0.4);
+  transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+.offcanvas-body .btnCarrito:hover {
+  background-color: #029ac3;
+  transform: scale(1.1);
+}
+
+/* Total del carrito */
+.text-end.m-2 {
+  color: #fff;
+  text-shadow: 0 0 10px #03bcf4;
+}
+
+/* Estilos responsivos */
+@media (max-width: 768px) {
+  .cartBox,
+  .offcanvas-body .row {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .offcanvas-body img.pizza-image {
+    margin-bottom: 1rem;
+  }
+}
+
