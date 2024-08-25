@@ -1,11 +1,25 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { Col, Container, Row } from "react-bootstrap";
 import CardPizza from "./CardPizza";
 import Header from "./Header";
-import { data } from "./pizzas";
 
 const Home = () => {
-  const [pizzas, setPizzas] = useState(data);
+  const [pizzas, setPizzas] = useState([]);
+
+  useEffect(() => {
+    const pizzasApi = async () => {
+      const url = "http://localhost:4000/api/pizzas";
+      try {
+        const response = await fetch(url);
+        const data = await response.json();
+        setPizzas(data);
+      } catch (error) {
+        console.error("Error fetching pizzas:", error);
+      }
+    };
+
+    pizzasApi();
+  }, []);
 
   return (
     <div className="home">
@@ -13,7 +27,7 @@ const Home = () => {
       <Container className="d-flex">
         <Row className="g-4">
           {pizzas.map((pizza) => (
-            <Col sm={12} md={6} lg={4} key={pizza.id}> {/* Usar un id único en lugar de name */}
+            <Col sm={12} md={6} lg={4} key={pizza.id}>
               <CardPizza
                 name={pizza.name}
                 price={pizza.price}
@@ -35,3 +49,4 @@ const Home = () => {
 };
 
 export default Home;
+

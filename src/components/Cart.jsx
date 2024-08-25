@@ -1,8 +1,8 @@
 import React, { useState } from "react";
 import { Col, Container, Offcanvas, Row } from "react-bootstrap";
-import { data } from "./pizzas";
+import { data } from "../data/pizzas";
 
-const Cart2 = () => {
+const Cart = () => {
   const [pizzas, setPizzas] = useState(data);
   const [cart, setCart] = useState([]);
   const [show, setShow] = useState(false);
@@ -178,4 +178,4 @@ const Cart2 = () => {
   );
 };
 
-export default Cart2;
+export default Cart;

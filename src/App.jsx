@@ -1,8 +1,10 @@
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import Cart2 from './components/Cart2';
 import Footer from './components/Footer';
+import Home from './components/Home';
 import NavBar from './components/NavBar';
+import Pizza from './components/Pizza';
+// import Cart from './components/Cart';
 
 
 function App() {
@@ -10,10 +12,11 @@ function App() {
     // Requisito 1: App.jsx se mostrarán los componentes Navbar, Home y Footer
     <>
         <NavBar></NavBar>
-        {/* <Home></Home>
-        <RegistrationForm />
+        <Home/>
+        {/* <RegistrationForm />
         <FormularioLogin /> */}
-        <Cart2/>
+        {/* <Cart/> */}
+        <Pizza/>
         <Footer></Footer>
     </>
   )

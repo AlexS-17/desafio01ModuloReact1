@@ -8,7 +8,7 @@ import Card from "react-bootstrap/Card";
 const CardPizza = ({ name, price, ingredients, img }) => {
   return (
     <Card className="m-4" style={{ minHeight: "550px" }}>
-      <Card.Img variant="top" src={img} alt={`Imagen de Pizza ${name}`} />
+      <Card.Img variant="top" src={img} alt={`Imagen de Pizza de ${name}`} />
       <Card.Body>
         <Card.Title className="text-body-secondary nombrePizza">
           <h4>{name}</h4>

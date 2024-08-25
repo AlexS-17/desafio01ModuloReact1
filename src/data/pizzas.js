@@ -1,4 +1,4 @@
-export const data = [
+const data = [
     {
       desc: "La pizza napolitana, de masa tierna y delgada pero bordes altos, es la versión propia de la cocina napolitana de la pizza redonda. El término pizza napoletana, por su importancia histórica o regional, se emplea en algunas zonas como sinónimo de pizza tonda.",
       id: "P001",
@@ -48,3 +48,5 @@ export const data = [
       price: 8500,
     },
   ];
+
+export default data;
